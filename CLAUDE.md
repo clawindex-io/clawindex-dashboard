@@ -24,3 +24,9 @@ This repo is a static vanilla-JS/HTML dashboard with no build step. It deploys t
 
 - Branch off `main` for all work.
 - Never commit to `main` directly.
+
+## Product direction (see clawindex-collector/docs/strategic-decision-record.md)
+
+- ClawIndex does NOT ship a custom SRE/span dashboard. It is an OTLP backend; operators use their existing Grafana/Aspire for span/health views.
+- The ONLY custom UI in this repo is the economics-and-accountability surface (cost attribution, unnecessary-escalation spend, bottleneck accountability, trends) — the thing generic OTLP viewers do not do.
+- Do NOT build or reintroduce span timelines, fleet health tables, or live span views here. The concept demo stays clearly labeled as seeded.
